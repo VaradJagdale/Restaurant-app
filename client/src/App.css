@@ -1173,6 +1173,26 @@ footer .container .banner:last-child .left a:hover {
   }
 }
 
+@media (max-width: 360px) {
+  .reservation .container .banner .reservation_form_box form .input-row input {
+    min-width: 100%; /* Ensure inputs take full width on small screens */
+  }
+
+  .reservation .container .banner .reservation_form_box {
+    padding: 10px;
+  }
+
+  .reservation .container .banner img {
+    width: 90%; /* Ensure image doesn't overflow */
+  }
+
+  .reservation .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
 @media (max-width: 325px) {
   .reservation .container .banner .reservation_form_box h1 {
     font-size: 1.6rem;
