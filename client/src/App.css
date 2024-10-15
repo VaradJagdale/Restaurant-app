@@ -1064,24 +1064,34 @@ footer .container .banner:last-child .left a:hover {
   flex-wrap: wrap;
 }
 
-.reservation .container .banner .reservation_form_box form .input-row input {
+.reservation .container .banner .reservation_form_box form .input-group {
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  min-width: calc(50% - 12.5px);
-  padding: 5px;
+}
+
+.reservation .container .banner .reservation_form_box form .input-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+.reservation .container .banner .reservation_form_box form .input-group input {
+  padding: 8px;
   font-size: 16px;
   font-weight: 300;
   border: none;
   border-bottom: 1px solid #333;
   background: transparent;
-  margin-bottom: 20px;
 }
 
-.reservation .container .banner .reservation_form_box form .input-row input:focus {
+.reservation .container .banner .reservation_form_box form .input-group input:focus {
   outline: none;
   border-bottom: 2px solid skyblue;
 }
 
-.reservation .container .banner .reservation_form_box form .input-row input::placeholder {
+.reservation .container .banner .reservation_form_box form .input-group input::placeholder {
   color: #222;
 }
 
@@ -1099,6 +1109,13 @@ footer .container .banner:last-child .left a:hover {
   color: #111;
   background: transparent;
   margin-top: 30px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.reservation .container .banner .reservation_form_box form button:hover {
+  background: black;
+  color: white;
 }
 
 .reservation .container .banner .reservation_form_box form button span {
@@ -1118,6 +1135,7 @@ footer .container .banner:last-child .left a:hover {
   width: 550px;
 }
 
+/* Responsive Styles */
 @media (max-width: 1520px) {
   .reservation .container {
     min-width: 100%;
@@ -1192,12 +1210,12 @@ footer .container .banner:last-child .left a:hover {
   }
 }
 
-
 @media (max-width: 325px) {
   .reservation .container .banner .reservation_form_box h1 {
     font-size: 1.6rem;
   }
 }
+
 
 /************************************************** NOT FOUND PAGE STYLING ***************************************************/
 

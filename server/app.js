@@ -10,6 +10,7 @@ dotenv.config();
 
 app.use(cors({
   origin: 'http://localhost:5173',
+  // origin: 'https:restaurant-app-backend-i4g3.onrender.com',
   methods: ["GET", "POST", "PUT", "DELETE"], 
   credentials: true, 
 }));
