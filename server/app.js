@@ -8,11 +8,15 @@ import reservationRouter from './routes/reservationRoute.js';
 const app = express();
 dotenv.config();
 
+// Set the origin based on environment
+const allowedOrigins = process.env.NODE_ENV === 'production'
+  ? 'https://restaurant-app-backend-i4g3.onrender.com'
+  : 'http://localhost:5173';
+
 app.use(cors({
-  origin: 'http://localhost:5173',
-  // origin: 'https:restaurant-app-backend-i4g3.onrender.com',
-  methods: ["GET", "POST", "PUT", "DELETE"], 
-  credentials: true, 
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
 }));
 
 app.use(express.json());
@@ -25,3 +29,4 @@ dbConnection();
 app.use(errorMiddleware);
 
 export default app;
+
