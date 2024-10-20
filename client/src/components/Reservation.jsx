@@ -1,8 +1,3 @@
-import React, { useState } from 'react';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
-import axios from 'axios';
-import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
 
 const Reservation = () => {
   const [firstName, setFirstName] = useState("");
@@ -19,7 +14,7 @@ const Reservation = () => {
     setIsSubmitting(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/v1/reservation/send",
+        "https://restaurant-app-backend-i4g3.onrender.com/api/v1/reservation/send",
         { firstName, lastName, email, phone, date, time },
         {
           headers: {
@@ -65,7 +60,6 @@ const Reservation = () => {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     required
-                    autoComplete="off"
                   />
                 </div>
                 <div className="input-group">
@@ -77,7 +71,6 @@ const Reservation = () => {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     required
-                    autoComplete="off"
                   />
                 </div>
               </div>
@@ -113,7 +106,6 @@ const Reservation = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    autoComplete="off"
                   />
                 </div>
                 <div className="input-group">
@@ -125,7 +117,6 @@ const Reservation = () => {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     required
-                    autoComplete="off"
                   />
                 </div>
               </div>
