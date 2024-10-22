@@ -10,7 +10,7 @@ dotenv.config();
 
 // Set the origin based on environment
 const allowedOrigins = process.env.NODE_ENV === 'production'
-  ? 'https://restaurant-app-backend-i4g3.onrender.com'
+  ? 'https://rainbow-dragon-b6dd1c.netlify.app'
   : 'http://localhost:5173';
 
 app.use(cors({

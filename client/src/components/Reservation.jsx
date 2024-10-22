@@ -1,3 +1,9 @@
+import React from "react";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import axios from "axios";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const Reservation = () => {
   const [firstName, setFirstName] = useState("");
@@ -18,9 +24,9 @@ const Reservation = () => {
         { firstName, lastName, email, phone, date, time },
         {
           headers: {
-            "Content-type": "application/json"
+            "Content-type": "application/json",
           },
-          withCredentials: true
+          withCredentials: true,
         }
       );
       toast.success(data.message);
@@ -59,7 +65,9 @@ const Reservation = () => {
                     placeholder="First Name"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
+                    aria-label="First Name"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div className="input-group">
@@ -70,7 +78,9 @@ const Reservation = () => {
                     placeholder="Last Name"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
+                    aria-label="Last Name"
                     required
+                    autoComplete="off"
                   />
                 </div>
               </div>
@@ -82,7 +92,9 @@ const Reservation = () => {
                     type="date"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
+                    aria-label="Reservation Date"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div className="input-group">
@@ -92,7 +104,9 @@ const Reservation = () => {
                     type="time"
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
+                    aria-label="Reservation Time"
                     required
+                    autoComplete="off"
                   />
                 </div>
               </div>
@@ -105,7 +119,11 @@ const Reservation = () => {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    aria-label="Email Address"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    title="Please enter a valid email address"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div className="input-group">
@@ -116,15 +134,25 @@ const Reservation = () => {
                     placeholder="Phone"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
+                    pattern="[0-9]{10}"
+                    title="Please enter a 10-digit phone number"
+                    aria-label="Phone Number"
                     required
+                    autoComplete="off"
                   />
                 </div>
               </div>
               <button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "RESERVE NOW"}
-                <span>
-                  <HiOutlineArrowNarrowRight />
-                </span>
+                {isSubmitting ? (
+                  <span className="spinner"></span> 
+                ) : (
+                  <>
+                    RESERVE NOW
+                    <span>
+                      <HiOutlineArrowNarrowRight />
+                    </span>
+                  </>
+                )}
               </button>
             </form>
           </div>
@@ -135,5 +163,8 @@ const Reservation = () => {
 };
 
 export default Reservation;
+
+               
+
 
 
