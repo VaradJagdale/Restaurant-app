@@ -8,9 +8,8 @@ import reservationRouter from './routes/reservationRoute.js';
 const app = express();
 dotenv.config();
 
-// Set the origin based on environment
 const allowedOrigins = process.env.NODE_ENV === 'production'
-  ? 'https://rainbow-dragon-b6dd1c.netlify.app'
+  ? 'https://restaurant-reservation-varad.netlify.app'
   : 'http://localhost:5173';
 
 app.use(cors({
