@@ -23,49 +23,49 @@
         "dishes": [
             {
                 "id": 1,
-                "image": "/breakfast1.jpg",
+                "image": "/breakfast.webp",
                 "title": "VEGGIE SUNRISE PIZZA",
                 "category": "Breakfast"
             },
             {
                 "id": 2,
-                "image": "/breakfast2.jpg",
+                "image": "/breakfast1.webp",
                 "title": "CLASSIC BREAKFAST BURGER",
                 "category": "Breakfast"
             },
             {
                 "id": 3,
-                "image": "/lunch1.webp",
+                "image": "/lunch.webp",
                 "title": "MARGHERITA PIZZA",
                 "category": "Lunch"
             },
             {
                 "id": 4,
-                "image": "/lunch22.jpg",
+                "image": "/lunch1.webp",
                 "title": "CLASSIC CHEESEBURGER",
                 "category": "lunch"
             },
             {
                 "id": 5,
-                "image": "/dinner11.jpg",
+                "image": "/dinner.webp",
                 "title": "TRUFFLE MUSHROOM PIZZA",
                 "category": "Dinner"
             },
             {
                 "id": 6,
-                "image": "/dinner2.jpg",
+                "image": "/dinner1.webp",
                 "title": "BLACKENED CHICKEN BURGER",
                 "category": "Dinner"
             },
             {
                 "id": 7,
-                "image": "/dinner3.jpg",
+                "image": "/dinner2.webp",
                 "title": "FOUR CHEESE PIZZA",
                 "category": "Dinner"
             },
             {
                 "id": 8,
-                "image": "/dinner5.jpg",
+                "image": "/dinner3.webp",
                 "title": "BUTTER CHICKEN BURGER",
                 "category": "Dinner"
             }
@@ -73,25 +73,25 @@
         "team": [
             {
                 "id": 1,
-                "image": "/teammember.png",
+                "image": "/team.webp",
                 "name": "JOHNATHAN TYLER",
-                "designation": "Founder & Head Chef"
+                "designation": "Head Chef"
             },
             {
                 "id": 2,
-                "image": "/teammember2.png",
+                "image": "/team1.webp",
                 "name": "WADE WARREN",
                 "designation": "Sous Chef"
             },
             {
                 "id": 3,
-                "image": "/teammember3.png",
-                "name": "JHON DOE",
+                "image": "/team2.webp",
+                "name": "JOHN DOE",
                 "designation": "Fast Food Chef"
             },
             {
                 "id": 4,
-                "image": "/teammember4.png",
+                "image": "/team3.webp",
                 "name": "ALEX COAL",
                 "designation": "Senior Chef"
             }
