@@ -66,7 +66,6 @@ const Reservation = () => {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     aria-label="First Name"
-                    required
                     autoComplete="off"
                   />
                 </div>
@@ -79,7 +78,6 @@ const Reservation = () => {
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     aria-label="Last Name"
-                    required
                     autoComplete="off"
                   />
                 </div>
@@ -93,7 +91,6 @@ const Reservation = () => {
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                     aria-label="Reservation Date"
-                    required
                     autoComplete="off"
                   />
                 </div>
@@ -105,7 +102,6 @@ const Reservation = () => {
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
                     aria-label="Reservation Time"
-                    required
                     autoComplete="off"
                   />
                 </div>
@@ -122,7 +118,6 @@ const Reservation = () => {
                     aria-label="Email Address"
                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                     title="Please enter a valid email address"
-                    required
                     autoComplete="off"
                   />
                 </div>
@@ -137,7 +132,6 @@ const Reservation = () => {
                     pattern="[0-9]{10}"
                     title="Please enter a 10-digit phone number"
                     aria-label="Phone Number"
-                    required
                     autoComplete="off"
                   />
                 </div>
