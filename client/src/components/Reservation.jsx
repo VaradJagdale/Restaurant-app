@@ -30,7 +30,6 @@ const Reservation = () => {
         }
       );
       toast.success(data.message);
-      // Reset the form fields
       setFirstName("");
       setLastName("");
       setEmail("");
@@ -39,7 +38,7 @@ const Reservation = () => {
       setTime("");
       navigate("/success");
     } catch (error) {
-      toast.error(error.response?.data?.message  || "Something went wrong");
+      toast.error(error.response.data.message);
     } finally {
       setIsSubmitting(false);
     }
@@ -65,7 +64,6 @@ const Reservation = () => {
                     placeholder="First Name"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    aria-label="First Name"
                     autoComplete="off"
                   />
                 </div>
@@ -77,7 +75,6 @@ const Reservation = () => {
                     placeholder="Last Name"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
-                    aria-label="Last Name"
                     autoComplete="off"
                   />
                 </div>
@@ -90,7 +87,6 @@ const Reservation = () => {
                     type="date"
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
-                    aria-label="Reservation Date"
                     autoComplete="off"
                   />
                 </div>
@@ -101,7 +97,6 @@ const Reservation = () => {
                     type="time"
                     value={time}
                     onChange={(e) => setTime(e.target.value)}
-                    aria-label="Reservation Time"
                     autoComplete="off"
                   />
                 </div>
@@ -115,7 +110,6 @@ const Reservation = () => {
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    aria-label="Email Address"
                     autoComplete="off"
                   />
                 </div>
@@ -127,19 +121,16 @@ const Reservation = () => {
                     placeholder="Phone"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    // pattern="[0-9]{10}"
-                    // title="Please enter a 10-digit phone number"
-                    // aria-label="Phone Number"
                     autoComplete="off"
                   />
                 </div>
               </div>
               <button type="submit" onClick={handleReservation}>
-                    RESERVE NOW
-                    <span>
-                      <HiOutlineArrowNarrowRight />
-                    </span>
-                
+                RESERVE NOW
+                <span>
+                  <HiOutlineArrowNarrowRight />
+                </span>
+
               </button>
             </form>
           </div>
@@ -151,7 +142,7 @@ const Reservation = () => {
 
 export default Reservation;
 
-               
+
 
 
 
