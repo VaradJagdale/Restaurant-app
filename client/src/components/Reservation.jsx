@@ -39,7 +39,7 @@ const Reservation = () => {
       setTime("");
       navigate("/success");
     } catch (error) {
-      toast.error(error.response?.data?.message || "Something went wrong");
+      toast.error(error.response?.data?.message  || "Something went wrong");
     } finally {
       setIsSubmitting(false);
     }
@@ -55,7 +55,7 @@ const Reservation = () => {
           <div className="reservation_form_box">
             <h1>MAKE A RESERVATION</h1>
             <p>For further questions, please call</p>
-            <form onSubmit={handleReservation}>
+            <form>
               <div className="input-row">
                 <div className="input-group">
                   <label htmlFor="firstName">First Name</label>
@@ -116,8 +116,6 @@ const Reservation = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     aria-label="Email Address"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                    title="Please enter a valid email address"
                     autoComplete="off"
                   />
                 </div>
@@ -129,24 +127,19 @@ const Reservation = () => {
                     placeholder="Phone"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    pattern="[0-9]{10}"
-                    title="Please enter a 10-digit phone number"
-                    aria-label="Phone Number"
+                    // pattern="[0-9]{10}"
+                    // title="Please enter a 10-digit phone number"
+                    // aria-label="Phone Number"
                     autoComplete="off"
                   />
                 </div>
               </div>
-              <button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? (
-                  <span className="spinner"></span> 
-                ) : (
-                  <>
+              <button type="submit" onClick={handleReservation}>
                     RESERVE NOW
                     <span>
                       <HiOutlineArrowNarrowRight />
                     </span>
-                  </>
-                )}
+                
               </button>
             </form>
           </div>

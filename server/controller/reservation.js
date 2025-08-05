@@ -1,7 +1,8 @@
 import ErrorHandler from '../error/error.js';
 import Reservation from "../models/reservationSchema.js"; 
 
-export const sendReservation = async (req, res, next) => {
+// export 
+const sendReservation = async (req, res, next) => {
     const { firstName, lastName, email, phone, date, time } = req.body;
 
     
@@ -10,8 +11,8 @@ export const sendReservation = async (req, res, next) => {
     }
 
     try {
-        
-        const reservation = await Reservation.create({
+            // const reservation 
+            await Reservation.create({
             firstName,
             lastName,
             email,
@@ -21,10 +22,10 @@ export const sendReservation = async (req, res, next) => {
         });
 
         
-        res.status(200).json({
+        res.status(201).json({
             success: true,
             message: "Reservation sent successfully!",
-            reservation 
+            // reservation 
         });
     } catch (error) {
        
@@ -36,3 +37,5 @@ export const sendReservation = async (req, res, next) => {
         return next(error);
     }
 };
+
+export default sendReservation;

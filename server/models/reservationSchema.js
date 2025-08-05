@@ -22,7 +22,9 @@ const reservationSchema = new mongoose.Schema({
     phone: {
         type: String,
         required: true,
-        match: [/^\d{10}$/, "Phone number must contain exactly 10 digits!"]
+        minLength: [10, "Phone number must contain 11 Digits."],
+        maxLength: [10, "Phone number must contain 11 Digits."],
+        // match: [/^\d{10}$/, "Phone number must contain exactly 10 digits!"]
     },
     date: {
         type: Date,
@@ -31,10 +33,10 @@ const reservationSchema = new mongoose.Schema({
     time: {
         type: String,
         required: true,
-        match: [/^\d{2}:\d{2}$/, "Time must be in HH:MM format"]
+        // match: [/^\d{2}:\d{2}$/, "Time must be in HH:MM format"]
     },
 });
 
-const Reservation = mongoose.model('Reservation', reservationSchema);
+ export const Reservation = mongoose.model('Reservation', reservationSchema);
 
-export default Reservation;
+// export default Reservation;

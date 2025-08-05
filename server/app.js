@@ -8,11 +8,9 @@ import reservationRouter from './routes/reservationRoute.js';
 const app = express();
 dotenv.config();
 
-const allowedOrigins = 'https://restaurant-reservation-varad.netlify.app';
-
 app.use(cors({
-  origin: allowedOrigins,
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: [process.env.FRONTEND_URL],
+  methods: ["POST"],
   credentials: true,
 }));
 
